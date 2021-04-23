@@ -26,7 +26,7 @@ async function execute(){
 async function initialiseTables(){
 
     let promises = [];
-    const tables = [userVideoTable];
+    const tables = [];
     try{
         for(let i = 0;i < tables.length;i++){
             promises.push(
