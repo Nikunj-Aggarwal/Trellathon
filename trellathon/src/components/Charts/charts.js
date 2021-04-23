@@ -23,8 +23,9 @@ const charts = () => {
         { x: 9, y: 0 },
       ];
     return (
-        <div style={{ marginTop: "15px" }}>
-      <XYPlot height={300} width={300}>
+        <div style={{ marginTop: "15px",
+        marginLeft : "50px" }}>
+      <XYPlot height={300} width={500}>
         <VerticalGridLines />
         <HorizontalGridLines />
         <XAxis />
