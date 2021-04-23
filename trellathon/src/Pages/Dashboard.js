@@ -5,7 +5,7 @@ import * as MdIcons from "react-icons/md";
 import * as RiIcons from "react-icons/ri";
 import * as IoIcons from "react-icons/im";
 import * as GrIcons from "react-icons/gr";
-import Chart from "../Charts/charts";
+// import Chart from "../Charts/charts";
 import '../components/Sidebar.css'
 
 const Dashboard = ()  => {
@@ -84,7 +84,7 @@ const Dashboard = ()  => {
               </div>
               <i className="fa fa-usd" aria-hidden="true"></i>
             </div>
-            <Chart />
+            {/* <Chart /> */}
           </div>
 
           <div className="charts_right">
