@@ -22,6 +22,11 @@ class UserRepo {
             return this.postgresClient.query(query);
         }
 
+        async getTotalSubscribersByUserId(userId){
+            const query = `SELECT COUNT(followid) FROM public.userfollow WHERE userid = '${userId}';`;
+            return this.postgresClient.query(query);
+        }
+
     }
     
     module.exports = UserRepo;
