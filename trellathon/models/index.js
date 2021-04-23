@@ -1,5 +1,6 @@
 const userTable = require("../models/user");
 const userVideoTable = require("../models/user-video");
+const userFollowTable = require("../models/user-follow");
 const { Client } = require('pg');
 require('dotenv').config();
 
