@@ -5,7 +5,9 @@ import * as MdIcons from "react-icons/md";
 import * as RiIcons from "react-icons/ri";
 import * as IoIcons from "react-icons/im";
 import * as GrIcons from "react-icons/gr";
-// import Chart from "../Charts/charts";
+import Chart from "../Charts/charts";
+import _likesChart from "../Charts/likesChart";
+import _SubscribersChart from "../Charts/Subscribers";
 import '../components/Sidebar.css'
 
 const Dashboard = ()  => {
@@ -84,7 +86,7 @@ const Dashboard = ()  => {
               </div>
               <i className="fa fa-usd" aria-hidden="true"></i>
             </div>
-            {/* <Chart /> */}
+            <Chart />
           </div>
 
           <div className="charts_right">
@@ -112,12 +114,34 @@ const Dashboard = ()  => {
               </div>
 
               <div className="card4">
-                <h1>+15%</h1>
+                <h1>-15%</h1>
                 <p>Video Likes</p>
               </div>
             </div>
           </div>
         </div>
+        {/* VIEW COUNT CHART */}
+        <div className="charts">
+          <div className="charts_left">
+              <div className="charts_left_title">
+                <div>
+                  <h1>Subscribers</h1>
+                </div>
+                <i className="fa fa-usd" aria-hidden="true"></i>
+              </div>
+              <_SubscribersChart />
+            </div>
+            <div className="charts_right">
+              <div className="charts_right_title">
+                <div>
+                  <h1>Likes</h1>
+                </div>
+                <i className="fa fa-usd" aria-hidden="true"></i>
+              </div>
+              <_likesChart />
+            </div>
+        </div>
+        
       </div>
     </main>
     )
