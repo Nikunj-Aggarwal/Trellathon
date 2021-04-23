@@ -28,6 +28,7 @@ container.register('getTotalLikesApi', asClass(require("../controller/user/getLi
 container.register('getTotalUploadedVideosApi', asClass(require("../controller/user/getUploadedVideos"), getScope()));
 container.register('getTotalViewsApi', asClass(require("../controller/user/getViews"), getScope()));
 container.register('getTotalSubscribersApi', asClass(require("../controller/user/getSubscribers"), getScope()));
+container.register('getAdApi', asClass(require("../controller/user/Ad"), getScope()));
 
 container.register('helper', asClass(require("../utilities/helper"), getScope()));
 
