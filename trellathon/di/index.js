@@ -18,14 +18,18 @@ const container = createContainer({injectionMode : InjectionMode.CLASSIC});
 
 
 container.register({
-    // postgresClient : asValue(middleware.postgresClient),
+    postgresClient : asValue(middleware.postgresClient),
 });
 
 
 //APIS
 //User
 container.register('getTotalLikesApi', asClass(require("../controller/user/getLikes"), getScope()));
-container.register('getTotalUploadedVideosApi', asClass(require("../controller/user/getLikes"), getScope()));
+container.register('getTotalUploadedVideosApi', asClass(require("../controller/user/getUploadedVideos"), getScope()));
+
+container.register('helper', asClass(require("../utilities/helper"), getScope()));
+
+container.register('userRepo', asClass(require("../repository/userRepo"), getScope()));
 
 
 

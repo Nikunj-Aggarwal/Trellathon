@@ -2,17 +2,19 @@ class GetLikes{
 
     constructor(helper, userRepo){
         this.helper = helper;
+        this.userRepo = userRepo;
     }
 
     async handleRequest(req, res){
 
         try{
-            const {userId} = req.get("X-USERID");
-            if(!userId){
+            const userId = req.get("X-USERID");
+            
+            if(userId === undefined){
                 return this.helper.writeResponse({msg : "userId is not present" ,code : 400},null,res);
             }
             const allLikesCount = await this.userRepo.getTotalLikesByUserId(userId);
-            return this.helper.writeResponse(null,allLikes,res);
+            return this.helper.writeResponse(null,allLikesCount.rows[0],res);
         }
         catch(err){
             console.log(err);
