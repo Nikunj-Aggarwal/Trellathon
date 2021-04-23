@@ -26,10 +26,13 @@ container.register({
 //User
 container.register('getTotalLikesApi', asClass(require("../controller/user/getLikes"), getScope()));
 container.register('getTotalUploadedVideosApi', asClass(require("../controller/user/getUploadedVideos"), getScope()));
+container.register('getTotalViewsApi', asClass(require("../controller/user/getViews"), getScope()));
+container.register('getTotalSubscribersApi', asClass(require("../controller/user/getSubscribers"), getScope()));
 
 container.register('helper', asClass(require("../utilities/helper"), getScope()));
 
 container.register('userRepo', asClass(require("../repository/userRepo"), getScope()));
+
 
 
 
