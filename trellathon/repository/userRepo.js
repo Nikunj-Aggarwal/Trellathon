@@ -17,6 +17,11 @@ class UserRepo {
             return this.postgresClient.query(query);
         }
 
+        async getTotalViewsByUserId(userId){
+            const query = `SELECT SUM(views) FROM public.uservideo WHERE userid = '${userId}';`;
+            return this.postgresClient.query(query);
+        }
+
     }
     
     module.exports = UserRepo;
