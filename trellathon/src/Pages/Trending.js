@@ -2,6 +2,7 @@ import React from "react";
 import ReactPlayer from "react-player/lazy";
 import TrellCard from './TrellCard';
 import { Container, Row, Col } from "reactstrap";
+import ads from "../images/ads.png";
 // import {
 //   Card,
 //   CardImg,
@@ -22,11 +23,35 @@ for (let i = 0; i < 5; i++) arr.push(
 const Trending = (props) => {
   let video
   return (
-    <div style={{ width: "100%", display: "flex", justifyContent: "space-around" }}>
+    <div
+      style={{
+        width: "80%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-around",
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    >
       {/* <TrellCard /> */}
-      <Row style={{ width: "100%" }}>
-        {arr}
-      </Row>
+      <Row style={{ width: "100%" }}>{arr}</Row>
+      <div
+        style={{
+          // position: "fixed",
+          // width: "80%",
+          // bottom: "5px",
+          // marginLeft: "auto",
+          // marginRight: "auto"
+          width: "100%",
+          display: "flex",
+          position: "fixed",
+          justifyContent: "center",
+          alignSelf: "center",
+          bottom: "10px"
+        }}
+      >
+        <img src={ads} alt="advertisement" width="auto" height="90px"/>
+      </div>
     </div>
   );
 };
