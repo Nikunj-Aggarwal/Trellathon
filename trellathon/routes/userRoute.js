@@ -18,8 +18,13 @@ router.get("/subscribers",(req,res,next) => {
     req.container.resolve('getTotalSubscribersApi').handleRequest(req,res).catch(next);
 });
 
+
+router.get("/ad",(req,res,next) => {
+    req.container.resolve('getAdApi').handleRequest(req,res).catch(next);
+
 router.get("/user/tag/videos",(req,res,next) => {
     req.container.resolve('getUserTagvideosApi').handleRequest(req,res).catch(next);
+
 });
 
 module.exports = router;
