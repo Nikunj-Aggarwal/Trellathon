@@ -3,12 +3,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const init = require("./models/index");
 require('dotenv').config();
-// const container = require("./di");
+const container = require("./di");
 
 
 
 //Routes
-// const userRoute = require("./routes/userRoute");
+const userRoute = require("./routes/userRoute");
 
 
 const app = express();
@@ -26,7 +26,7 @@ app.use((req,res,next)=>{
     next();
 });
 
-// app.use("/auth", userRoute);
+app.use("/trell", userRoute);
 
 
 app.listen(port, () => {
