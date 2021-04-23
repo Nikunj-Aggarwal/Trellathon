@@ -27,6 +27,11 @@ class UserRepo {
             return this.postgresClient.query(query);
         }
 
+        async getAdByUserId(userId){
+            const query = `SELECT * FROM ad WHERE tagname = (SELECT tagname FROM public.usertag WHERE userid = '${userId}' ORDER BY tagcount DESC;)`;
+            return this.postgresClient.query(query);
+        }
+
     }
     
     module.exports = UserRepo;
