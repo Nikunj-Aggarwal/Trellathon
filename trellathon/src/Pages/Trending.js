@@ -1,11 +1,34 @@
-import React from 'react'
+import React from "react";
+import ReactPlayer from "react-player/lazy";
+import TrellCard from './TrellCard';
+import { Container, Row, Col } from "reactstrap";
+// import {
+//   Card,
+//   CardImg,
+//   CardText,
+//   CardBody,
+//   CardTitle,
+//   CardSubtitle,
+//   Button,
+// } from "reactstrap";
+const link =
+  "https://cdn.trell.co/videos/transformed/h_360,w_360/eo_3/videos/orig/wS7G38y2UGlBMUnCb28Og4ZYGhXKfyIE.mp4";
+const arr = [];
+for (let i = 0; i < 5; i++) arr.push(
+  <Col xs="12" sm="6" md="4" lg="3" style={{ marginBottom: "70px" }}>
+    <TrellCard />
+  </Col>
+);
+const Trending = (props) => {
+  let video
+  return (
+    <div style={{ width: "100%", display: "flex", justifyContent: "space-around" }}>
+      {/* <TrellCard /> */}
+      <Row style={{ width: "100%" }}>
+        {arr}
+      </Row>
+    </div>
+  );
+};
 
-function Trending() {
-    return (
-        <div className='trending'>
-            <h1>Trending</h1>
-        </div>
-    )
-}
-
-export default Trending
+export default Trending;
