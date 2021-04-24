@@ -10,7 +10,7 @@ import {
   Button,
 } from "reactstrap";
 
-const TrellCard = () => {
+const TrellCard = ({url}) => {
     return (
       <Card
         style={{
@@ -31,7 +31,7 @@ const TrellCard = () => {
           }}
         >
           <ReactPlayer
-            url="https://cdn.trell.co/videos/transformed/h_360,w_360/eo_3/videos/orig/Sz3iFLDphVhDwnLIiJzqYaMMW10njopP.mp4"
+            url={url}
             playing={true}
             loop={true}
             width="100%"
