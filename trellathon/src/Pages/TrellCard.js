@@ -18,12 +18,20 @@ const TrellCard = () => {
           height: "fit-content",
           padding: "10px",
           border: "0px",
+          zIndex: "-10",
           // borderRadius: "20px",
         }}
       >
-        <div style={{ width: "250px", overflow: "hidden", borderRadius: "10px" }}>
+        <div
+          style={{
+            width: "230px",
+            height: "350px",
+            overflow: "hidden",
+            borderRadius: "10px",
+          }}
+        >
           <ReactPlayer
-            url="https://cdn.trell.co/videos/transformed/h_360,w_360/eo_3/videos/orig/wS7G38y2UGlBMUnCb28Og4ZYGhXKfyIE.mp4"
+            url="https://cdn.trell.co/videos/transformed/h_360,w_360/eo_3/videos/orig/Sz3iFLDphVhDwnLIiJzqYaMMW10njopP.mp4"
             playing={true}
             loop={true}
             width="100%"
